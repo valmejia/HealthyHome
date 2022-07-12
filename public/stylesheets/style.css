@@ -29,8 +29,25 @@ h1 {
   border-radius: 15px;
   padding: 10px;
   border: none;
+  margin-left: 5cm;
+  margin-top: 2.5cm;
 }
-
+.title{
+  color: rgb(30, 11, 134);
+  padding-left:2cm;
+  padding-top:5cm;
+  padding-bottom:2cm;
+}
+.title2{
+  color: rgb(30, 11, 134);
+  padding-left:2cm;
+  padding-top:3cm;
+  padding-bottom:1cm;
+}
+.slogan{
+  color: rgb(86, 60, 235);
+  margin-left:2cm;
+}
 .buttonazulcuadrado{
   background-color: #021470;
   text-decoration: none;
@@ -67,20 +84,40 @@ h1 {
 }
 
 .background{
-  background-image: url('/images/heal.jpeg');
-  height: 100vh;
+  background-image: url('/images/heal2.jpg');
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: contain;
-
+  height: 100vh;
+  
+  /*background-size: contain;*/
+  /*#background */
+    /*position: fixed;*/
+    /*top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);*/
+    
 }
 
 .background22{
-  background-image:  url('/images/reasons.jpeg');
+  background-image:  url('/images/reasons2.jpg');
   height: 100vh;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
-
+.wrapper {
+  font-size: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-left:2cm;
+  color: #021470;
+}
 .valeimg{
   border-radius: 70%;
   width: 150px;
