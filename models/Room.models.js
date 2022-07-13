@@ -1,20 +1,20 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const taskSchema = new Schema({
-    title:{
+const rooms = new Schema({
+    name:{
         type: String,
         trim: true,
         minLength: 2, 
         required: true,
     },
-    
-    status:{
+    typeHab:{
         type: String,
-        required: true,
+    },
+    ub:{
+        type: String
+    }, 
+    description:{
+        type: String,
     }
-});
-
-const Task = mongoose.model('Task', taskSchema);
-
-module.exports = Task;
+})
