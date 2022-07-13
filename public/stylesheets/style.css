@@ -5,11 +5,14 @@ body {
 
 .healthy{
   color:#021470;
-  font: bold 700 italic;
+  font-weight: bold;
+  font-size: 100px;
 }
 h1,
 h5, 
-h3 {
+h3, 
+h4,
+p {
   color:#021470;
   font-family: 'Poppins', sans-serif;
 }
@@ -18,8 +21,10 @@ h3 {
   color:#021470;
   text-decoration: none;
 }
-h1 {
-  color: 15px;
+
+.logo{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
 }
 
 .buttonazul{
@@ -104,11 +109,16 @@ h1 {
 .move{
   display: flex;
   justify-content: right;
+  
 }
 
 .wel{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-items: flex-start;
+  text-align: center;
+  justify-content: center;
+}
+
+.slogan{
+  font-size: 30px;
 }
