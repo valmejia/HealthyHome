@@ -1,12 +1,17 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const rooms = new Schema(
+const taskSchema = new Schema(
     {
-        name:{
+        title:{
             type: String,
             trim: true,
             minLength: 2, 
+            required: true,
+        },
+        
+        status:{
+            type: String,
             required: true,
         },
         typeHab:{
@@ -19,5 +24,8 @@ const rooms = new Schema(
             type: String,
         }
     }
-)
+);
 
+const Task = mongoose.model('Task', taskSchema);
+
+module.exports = Task;

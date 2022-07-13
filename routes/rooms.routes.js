@@ -1,33 +1,44 @@
 const router = require("express").Router()
+const Room = require('../models/Room.model');
 
 //////////////////////////ROOMS ROUTES////////////////////
-//bathroom
-router.get("/bathroom", (req, res) => {
-    res.render('bathroom')
-  });
-  //garage
-  router.get("/garage", (req, res) => {
-    res.render('garage')
-  });
-  //kitchen
-  router.get("/kitchen", (req, res) => {
-    res.render('kitchen')
-  });
-  //livingroom
-  router.get("/livingroom", (req, res) => {
-    res.render('livingroom')
-  });
-  //myroom
-  router.get("/myroom", (req, res) => {
-    res.render('myroom')
-  });
-  //adroom
-  router.get("/addroom", (req, res) => {
-    res.render('addroom')
-  });
+router.get("/rooms", async (req, res) => {
+    try {
+        const rooms = await Room.find({});
+        res.render('rooms/index', {
+          rooms,
+        })
+      } catch(e) {
+        console.warn(e);
+      }
+});
 
-  router.get("/addtask", (req, res) => {
-    res.render('addtask')
-  });
+
+router.get("/rooms/show/:roomId", async (req, res) => {
+    try {
+      const room = await Room.findOne({_id: req.params.roomId});
+  
+      res.render('rooms/show', {
+        room,
+      })
+    } catch(e) {
+      console.warn(e);
+    }
+});
+
+router.get("/rooms/new", (req, res) => {
+    res.render('rooms/new');
+});
+
+
+router.post("/rooms/create", async (req, res) => {
+    const newModel = new Room({
+        roomName: req.body.room_name,
+    });
+  
+    await newModel.save()
+  
+    res.redirect('/rooms');
+})
 
 module.exports = router

@@ -1,0 +1,21 @@
+<h1>Rooms</h1>
+
+<a href="/rooms/new" class="btn btn-primary">Nueva habitación</a>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each rooms}}
+        <tr>
+            <th scope="row">
+              <a href="/rooms/show/{{this._id}}" class="link-primary">{{this._id}}</a>
+            </th>
+            <td>{{this.roomName}}</td>
+        </tr>
+    {{/each}}
+  </tbody>
+</table>
