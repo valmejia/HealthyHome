@@ -5,9 +5,6 @@ router.get("/", (req, res, next) => {
   res.render("index");
 });
 
-
-
-
 ///////////////////////////////////////// PREGUNTAR////////////////////////////
 router.get("/welcome", (req, res) => {
   res.render('welcome')

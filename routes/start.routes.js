@@ -1,13 +1,18 @@
 const router = require('express').Router();
 
-///sing in
-router.get("/singin", (req, res) => {
-    res.render('singin')
+///sign in
+router.get("/signin", (req, res) => {
+    res.render('signin')
 });
   
-//singup 
-router.get("/singup", (req, res) => {
-    res.render('singup')
+//signup 
+router.get("/signup", (req, res) => {
+    res.render('signup')
+});
+
+//get req.body
+router.post('/signup', (req, res) => {
+  res.send('user')
 });
 
 //about us 

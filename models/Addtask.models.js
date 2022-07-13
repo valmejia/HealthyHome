@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const task = new Schema({
-    
+const task = new Schema(
+    {
     name:{
         type: String,
         trim: true,
@@ -11,15 +11,12 @@ const task = new Schema({
     },
     typeTask:{
         type: String,
+        
     },
-    ub:{
-        type: String
-    }, 
     description:{
         type: String,
     },
-    time:{
-        type: Number,
-    }
-})
+   
+}
+);
 

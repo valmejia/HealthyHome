@@ -14,6 +14,9 @@ const employeeSchema = new Schema({
     email:{
         type: String,
     },
+    phone: {
+        type: String,
+    },
     numHab:{
         type: Number,
     }, 
@@ -26,10 +29,8 @@ const employeeSchema = new Schema({
     numPet:{
         type: pet,
     },
-    numHab: {
-        type: string,
-    },
-    typeHo:{
+    
+    propertyType: {
         type: String,
     }
 })

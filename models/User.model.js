@@ -9,6 +9,12 @@ const userSchema = new Schema(
       require: true, 
       minLength: 4,
     },
+    email: {
+      type: String,
+      unique: true,
+      require: true, 
+      minLength: 4,
+    },
     password:{
       type: String,
       unique: true,
@@ -20,6 +26,9 @@ const userSchema = new Schema(
       default: 'user', 
       enum: ['user', 'employee']
     }, 
+    phone:{
+      type: String
+    },
     isVerified:{
       type: Boolean,
       default: false

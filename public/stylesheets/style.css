@@ -1,17 +1,17 @@
+
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #f4f4f4;
 }
 
-a{
-  text-decoration: none;
-  color:white;
+.healthy{
+  color:#021470;
+  font: bold 700 italic;
 }
-
 h1,
 h5, 
 h3 {
   color:#021470;
+  font-family: 'Poppins', sans-serif;
 }
 
 .letrablan{
@@ -39,17 +39,6 @@ h1 {
   margin-right: 10px; 
   border-radius: 10px;
   padding: 10px;
-  border: none;
-}
-
-.buttonget{
-  background-color: #021470;
-  text-decoration: none;
-  color: white;
-  padding: 25px;
-  margin-top: 10px; 
-  margin-right: 10px; 
-  border-radius: 15px;
   border: none;
 }
 
@@ -110,4 +99,18 @@ h1 {
 
 .marimg{
   margin: 40px;
+}
+
+.move{
+  display: flex;
+  justify-content: right;
+}
+
+.wel{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  
 }

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const rooms = new Schema(
+const roomSchema = new Schema(
     {
         name:{
             type: String,
@@ -9,15 +9,19 @@ const rooms = new Schema(
             minLength: 2, 
             required: true,
         },
-        typeHab:{
+        room:{
             type: String,
+            required: true,
         },
-        ub:{
-            type: String
-        }, 
+        ubication:{
+            type: String,
+            
+        },
         description:{
             type: String,
-        }
+            required: true,
+        },
+   
     }
-)
+);
 
