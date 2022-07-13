@@ -1,0 +1,58 @@
+<h1>Test Rooms</h1>
+
+<a href="/testroom/new" class="btn btn-primary">Nueva tarea</a>
+
+<div class="row">
+    <div class="col">
+        <h4>TO-DO</h4>
+        {{#each todo}}
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.title}}</h5>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+
+    <div class="col">
+        <h4>In progress</h4>
+        {{#each inProgress}}
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.title}}</h5>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+
+    <div class="col">
+        <h4>Done</h4>
+
+        {{#each done}}
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.title}}</h5>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+  </div>
+<!--<div class=" backgris"> 
+    <div class="container">
+    <div>
+            <button class="buttonazul" href="/"> <i class="fa-solid fa-house"></i></button>
+        </div>
+        <div>
+        <h1> My room task</h1>
+        </div>
+
+        <div>
+            <button class="buttonazul"><a href="/addtask">Add task</a></button>
+        </div>
+    </div>
+    
+</div>
+ -->
