@@ -5,6 +5,31 @@ router.get("/", (req, res, next) => {
   res.render("index");
 });
 
+///sign in
+router.get("/signin", (req, res) => {
+  res.render('signin')
+});
+
+//signup 
+router.get("/signup", (req, res) => {
+  res.render('signup')
+});
+
+//get req.body
+router.post('/signup', (req, res) => {
+res.send('user')
+});
+
+//about us 
+router.get("/aboutus", (req, res) => {
+  res.render('aboutus')
+});
+
+//contact us
+router.get("/contactus", (req, res) => {
+  res.render('contactus')
+});
+
 ///////////////////////////////////////// PREGUNTAR////////////////////////////
 router.get("/welcome", (req, res) => {
   res.render('welcome')
@@ -32,6 +57,5 @@ router.get("/taskhome", (req, res) => {
 router.get("/employeehome", (req, res) => {
   res.render('employeehome')
 });
-
 
 module.exports = router;

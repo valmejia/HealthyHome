@@ -19,9 +19,13 @@ const taskSchema = new Schema(
         },
         ub:{
             type: String
-        }, 
+        },
         description:{
             type: String,
+        },
+        roomId:{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Room'
         }
     }
 );

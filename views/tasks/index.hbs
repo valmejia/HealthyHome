@@ -1,0 +1,40 @@
+<h1>My Tasks</h1>
+
+<a href="/tasks/new" class="btn btn-primary">New Task</a>
+
+{{#each rooms}}
+    <h3>{{this.roomName}}</h3>
+    {{#if this.tasks}}
+    <div class="row mb-6">
+        <div class="col">
+            <h5>TO-DO</h5>
+            {{#each this.tasks}}
+                {{#if this.isToDo}}
+                    {{> header}}
+                {{/if}}
+            {{/each}}
+        </div>
+
+        <div class="col">
+            <h5>In progress</h5>
+            {{#each this.tasks}}
+                {{#if this.isInProgress}}
+                    {{> header}}
+                {{/if}}
+            {{/each}}
+        </div>
+
+        <div class="col">
+            <h5>Done</h5>
+
+            {{#each this.tasks}}
+                {{#if this.isDone}}
+                    {{> header}}
+                {{/if}}
+            {{/each}}
+        </div>
+    </div>
+    {{else}}
+        <p class="text-center">No hay tareas</p>
+    {{/if}}
+{{/each}}

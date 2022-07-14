@@ -18,19 +18,19 @@ router.get("/", async (req, res) => {
 });
 
 
-router.get("/new", (req, res) => {
-  res.render('new_testroom');
-})
+// router.get("/new", (req, res) => {
+//   res.render('new_testroom');
+// })
 
-router.post("/create", async (req, res) => {
-  const newModel = new Task({
-    title: req.body.title,
-    status: 'todo',
-  });
+// router.post("/create", async (req, res) => {
+//   const newModel = new Task({
+//     title: req.body.title,
+//     status: 'todo',
+//   });
 
-  await newModel.save()
+//   await newModel.save()
 
-  res.redirect('/testroom');
-})
+//   res.redirect('/testroom');
+// })
 
 module.exports = router;

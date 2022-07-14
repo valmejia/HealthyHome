@@ -1,0 +1,19 @@
+<form action="/tasks/create" method="post">
+    <div class="mb-3">
+        <label for="title" class="form-label">Titulo</label>
+        <input type="text" name="title" class="form-control" placeholder="task description" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="description" class="form-label">Example textarea</label>
+        <textarea class="form-control" id="description" rows="3"></textarea>
+    </div>
+
+    <select class="form-select" name="room_id"  required>
+        {{#each rooms}}
+            <option value={{this._id}}>{{this.roomName}}</option>
+        {{/each}}
+    </select>
+
+    <button type="submit">Save</button>
+</form>
