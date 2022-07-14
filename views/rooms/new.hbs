@@ -2,10 +2,25 @@
     <h1> Create Room</h1>
     <form action="/rooms/create" method="post">
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" name="room_name" placeholder="Sala">
-            <label for="room_name">Nombre de la habitación</label>
+            <input  name="room_name" type="fullname" class="form-control" id="floatingInput" placeholder="Room name">
+            <label for="floatingInput"> Room name</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input name="ubication" type="text" class="form-control" id="floatingInput" placeholder="Ubication">
+            <label for="floatingInput">Ubication</label>
         </div>
 
-        <button class="buttonazul" type="submit">Guardar</button>
+        <div class="form-floating mb-3">
+            <input name="description" type="text" class="form-control" id="floatingInput" placeholder="Description">
+            <label for="floatingInput">Description</label>
+        </div>
+
+    <div>
+        <button class="buttonazul" type="submit">Create room</button>
+    </div>
+
     </form>
 </div>
+
+
+

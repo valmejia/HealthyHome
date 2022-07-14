@@ -1,13 +1,36 @@
-<form action="/auth/login" method="POST">
-   <label> Username
-      <input type="text" name="username">
-   </label>
-   <label> Password
-      <input type="password" name="password">
-   </label>
+<div class="backgris"> 
+  <div class="container">
+        <h1> Log in</h1>
+         <form action="/auth/login" method="POST">
+            <div class="form-floating mb-3">
+               <input name="username" type="text" class="form-control" id="floatingInput" placeholder="Full name">
+               <label for="floatingInput"> Full name</label>
+            </div>
+            <div class="form-floating mb-3">
+               <input name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+               <label for="floatingInput">Email</label>
+            </div>
+            <div class="form-floating">
+               <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+               <label for="floatingPassword">Password</label>
+            </div> 
 
-   <button type="submit">Submit</button>
-</form>
+            <div>
+                  <button type="submit" class="buttonazul"> Log In </button>	
+            </div>
+         </form>
+    </div>
+         
+        
+  
+    
+  <div> 
+        <img src="/images/2.png">
+    </div>
+</div>
+
+
+
 
 {{#if errorMessage}}
    {{errorMessage}}

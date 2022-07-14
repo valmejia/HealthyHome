@@ -1,21 +1,55 @@
-<h1>Rooms</h1>
+<div class="backgris">
+    <div class="container">
+       
+        <div> 
+            <button class="buttonazul"><a href="/">Sign Out</a></button>
+        </div>
 
-<a href="/rooms/new" class="btn btn-primary">Nueva habitación</a>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nombre</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each rooms}}
-        <tr>
-            <th scope="row">
-              <a href="/rooms/show/{{this._id}}" class="link-primary">{{this._id}}</a>
-            </th>
-            <td>{{this.roomName}}</td>
-        </tr>
-    {{/each}}
-  </tbody>
-</table>
+        <div>
+            <h1> Welcome {{this.user.username}}!</h1>
+            <h5> Send task for {{employeename}}</h5>
+        </div>
+
+      <a href="/rooms/new" class="buttonazul"> Add Room</a>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each rooms}}
+              <tr>
+                  <td>
+                    <button class="buttonazulcuadrado">
+                      <a href="/rooms/show/{{this.roomName}}"> {{this.roomName}}</a>
+                    </button>
+                    </td>
+                  <td>{{this.description}}</td>
+                  <td>{{this.ubication}}</td>
+              </tr>
+          {{/each}}
+        </tbody>
+
+      </table>
+  </div>
+</div>
+
+
+
+{{#each rooms}}
+  <p>
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="/rooms/show/{{this.roomName}}" role="button" aria-expanded="false" aria-controls="collapseExample">
+      {{this.roomName}}
+    </a>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+      Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+    </div>
+  </div>
+{{/each}}
+  
+
+
+

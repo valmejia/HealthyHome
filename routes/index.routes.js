@@ -6,9 +6,7 @@ router.get("/", (req, res, next) => {
 });
 
 ///////////////////////////////////////// PREGUNTAR////////////////////////////
-router.get("/welcome", (req, res) => {
-  res.render('welcome')
-});
+
 //user
 router.get("/user", (req, res) => {
   res.render('user')

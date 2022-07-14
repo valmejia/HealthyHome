@@ -17,9 +17,7 @@ const taskSchema = new Schema(
         typeHab:{
             type: String,
         },
-        ub:{
-            type: String
-        }, 
+       
         description:{
             type: String,
         }

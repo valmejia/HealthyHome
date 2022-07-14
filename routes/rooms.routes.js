@@ -14,7 +14,7 @@ router.get("/rooms", async (req, res) => {
 });
 
 
-router.get("/rooms/show/:roomId", async (req, res) => {
+/*router.get("/rooms/show/:roomId", async (req, res) => {
     try {
       const room = await Room.findOne({_id: req.params.roomId});
   
@@ -24,6 +24,18 @@ router.get("/rooms/show/:roomId", async (req, res) => {
     } catch(e) {
       console.warn(e);
     }
+});*/
+
+router.get("/rooms/show/:room_name", async (req, res) => {
+  try {
+    const room = await Room.findOne({room_name: req.params.room_name});
+
+    res.render('rooms/show', {
+      room,
+    })
+  } catch(e) {
+    console.warn(e);
+  }
 });
 
 router.get("/rooms/new", (req, res) => {
@@ -33,7 +45,9 @@ router.get("/rooms/new", (req, res) => {
 
 router.post("/rooms/create", async (req, res) => {
     const newModel = new Room({
-        roomName: req.body.room_name,
+        roomName: req.body.roomName,      
+        ubication: req.body.ubication,
+        description: req.body.description
     });
   
     await newModel.save()
