@@ -1,55 +1,48 @@
 <div class="backgris">
-    <div class="container">
-       
+
+  <div class="container mt-3">
+    <div>
         <div> 
-            <button class="buttonazul"><a href="/">Sign Out</a></button>
+          <button class="buttonazul mt-3"><a href="/auth/logout">Log Out</a></button>
         </div>
 
         <div>
-            <h1> Welcome {{this.user.username}}!</h1>
-            <h5> Send task for {{employeename}}</h5>
+          <h1> Welcome {{User.username}}!</h1>
+          <h5> Send task for {{employeename}}</h5>
         </div>
 
-      <a href="/rooms/new" class="buttonazul"> Add Room</a>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Nombre</th>
-          </tr>
-        </thead>
-        <tbody>
-          {{#each rooms}}
-              <tr>
-                  <td>
-                    <button class="buttonazulcuadrado">
-                      <a href="/rooms/show/{{this.roomName}}"> {{this.roomName}}</a>
-                    </button>
-                    </td>
-                  <td>{{this.description}}</td>
-                  <td>{{this.ubication}}</td>
-              </tr>
-          {{/each}}
-        </tbody>
+        <button class="buttonazul mb-3">
+           <a href="/rooms/new" > Add Room</a>
+        </button>
+    
+      </div>
 
-      </table>
+        <div class="row">
+
+            {{#each rooms}}
+              <div class="col-4 mt-3 center">
+                    <div class="card" style="width: 18rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">{{ roomName }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ ubication }}</h6>
+                        <p class="card-text">{{ description }}</p>
+                        <div class="card-body">
+                          <button class="buttonazul ">
+                            <a href="/tasks" class="card-link"> Task </a>
+                          </button>
+
+                          <button class="buttonazul">
+                            <a href="#" class="card-link">Upload</a>
+                          </button>
+                          
+                        </div>
+                        
+                      </div>
+                    </div>
+              </div>
+            {{/each}}
+
+
+        </div>
   </div>
 </div>
-
-
-
-{{#each rooms}}
-  <p>
-    <a class="btn btn-primary" data-bs-toggle="collapse" href="/rooms/show/{{this.roomName}}" role="button" aria-expanded="false" aria-controls="collapseExample">
-      {{this.roomName}}
-    </a>
-  </p>
-  <div class="collapse" id="collapseExample">
-    <div class="card card-body">
-      Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-    </div>
-  </div>
-{{/each}}
-  
-
-
-

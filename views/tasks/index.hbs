@@ -1,0 +1,102 @@
+<div class="container mt-3">
+    <button class="buttonazul"> <a href="/rooms"> <i class="fa-solid fa-house"></i></a></button>
+
+    <div class="row mt-3">
+        <h1>My Tasks</h1>
+        
+        <button class="buttonazul mt-3">
+            <a href="/tasks/new" >New Task</a>
+        </button>
+        
+    </div>
+
+{{#each rooms}}
+
+        <div class="row mb-3 mt-3 card p-4 mt-3">
+            <h4>Room: {{this.roomName}}</h4>
+            <hr>
+            {{#if this.tasks}}
+                <div class="row mb-6">
+                    <div class="col-4">
+                        <h5>TO-DO</h5>
+                        {{#each this.tasks}}
+                            {{#if this.isToDo}}
+                                <div class="card mb-2" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{this.title}}</h5>
+                                        <form action="/tasks/{{this._id}}" method="post">  
+                                            <div class="form-floating">
+                                                <select class="form-select" name="status">
+                                                    <option selected>Open this select menu</option>
+                                                    <option value="todo">To do</option>
+                                                    <option value="in_progress">In progress</option>
+                                                    <option value="done">Done</option>
+                                                </select>
+                                                <label for="floatingSelect">Works with selects</label>
+                                            </div>
+                                            <button type="submit" class="buttonazul">Save Status</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            {{/if}}
+                        {{/each}}
+                    </div>
+
+                    <div class="col-4">
+                        <h5>In progress</h5>
+                        {{#each this.tasks}}
+                            {{#if this.isInProgress}}
+                                <div class="card mb-2" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{this.title}}</h5>
+                                        <form action="/tasks/{{this._id}}" method="post">  
+                                            <div class="form-floating">
+                                                <select class="form-select" name="status">
+                                                    <option selected>Open this select menu</option>
+                                                    <option value="todo">To do</option>
+                                                    <option value="in_progress">In progress</option>
+                                                    <option value="done">Done</option>
+                                                </select>
+                                                <label for="floatingSelect">Works with selects</label>
+                                            </div>
+                                            <button type="submit" class="buttonazul">Save Status</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            {{/if}}
+                        {{/each}}
+                    </div>
+
+                    <div class="col-4">
+                        <h5>Done</h5>
+
+                        {{#each this.tasks}}
+                            {{#if this.isDone}}
+                                <div class="card mb-2" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{this.title}}</h5>
+                                        <form action="/tasks/{{this._id}}" method="post">  
+                                            <div class="form-floating">
+                                                <select class="form-select" name="status">
+                                                    <option selected>Open this select menu</option>
+                                                    <option value="todo">To do</option>
+                                                    <option value="in_progress">In progress</option>
+                                                    <option value="done">Done</option>
+                                                </select>
+                                                <label for="floatingSelect">Works with selects</label>
+                                            </div>
+                                            <button type="submit" class="buttonazul">Save Status</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            {{/if}}
+                        {{/each}}
+                    </div>
+                </div>
+            {{else}}
+                <p class="text-center">No tasks</p>
+            {{/if}}
+        </div>
+{{/each}}
+
+</div>

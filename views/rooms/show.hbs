@@ -1,6 +1,35 @@
-<div class="container">
+<style>
+    td, .card a{
+    color: #000 !important;
+  }
+</style>
+<div class="container mt-3">
     <div>
-     <button class="buttonazul" href=""> <i class="fa-solid fa-house"></i></button>
+     <button class="buttonazul mt-3" href="/rooms"> <i class="fa-solid fa-house"></i></button>
     </div>
 
-    <h1>{{room.roomName}}</h1>
+
+
+   <div class="row mt-3">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ room.roomName }}</h5>
+                <p class="card-text">{{ room.description }}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                {{#each tasks}}
+                    <li class="list-group-item">
+                        
+                        <p> <input type="checkbox"> {{title}} - {{status}}</p>
+                    </li>
+                {{/each}}
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link"> Upload</a>
+                <a href="#" class="card-link">Delete</a>
+            </div>
+        </div>
+   </div>
+
+
+</div>

@@ -15,6 +15,7 @@ h4,
 p {
   color:#021470;
   font-family: 'Poppins', sans-serif;
+  text-align: center;
 }
 
 .letrablan{
@@ -39,6 +40,8 @@ p {
 .buttonazulcuadrado{
   background-color: #021470;
   text-decoration: none;
+  text-align: center;
+  text-align: center;
   color: white;
   margin-top: 10px; 
   margin-right: 10px; 
@@ -113,4 +116,12 @@ h3{
 .divi{
   margin-top: 70px;
   margin-bottom: 70px;
+}
+
+.liback{
+  background-color: #efedef;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  color: #021470;
 }

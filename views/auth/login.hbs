@@ -1,32 +1,41 @@
 <div class="backgris"> 
-  <div class="container">
-        <h1> Log in</h1>
-         <form action="/auth/login" method="POST">
-            <div class="form-floating mb-3">
-               <input name="username" type="text" class="form-control" id="floatingInput" placeholder="Full name">
-               <label for="floatingInput"> Full name</label>
-            </div>
-            <div class="form-floating mb-3">
-               <input name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-               <label for="floatingInput">Email</label>
-            </div>
-            <div class="form-floating">
-               <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
-               <label for="floatingPassword">Password</label>
-            </div> 
+  <div class="container mt-3">
 
-            <div>
-                  <button type="submit" class="buttonazul"> Log In </button>	
-            </div>
-         </form>
-    </div>
-         
+      <div class="mb-3">
+         <h1> Log in</h1>
+      </div>
+
+      <div class="row">
+
+         <div class="col-6">
+            <form action="/auth/login" method="POST">
+               <div class="form-floating mb-3">
+                  <input name="username" type="text" class="form-control" id="floatingInput" placeholder="Full name">
+                  <label for="floatingInput"> Full name</label>
+               </div>
+               <div class="form-floating mb-3">
+                  <input name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Email</label>
+               </div>
+               <div class="form-floating mb-3">
+                  <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                  <label for="floatingPassword">Password</label>
+               </div> 
+
+               <div>
+                     <button type="submit" class="buttonazul"> Log In </button>	
+               </div>
+            </form>
+         </div>
+
+         <div class="col-6"> 
+            <img src="/images/2.png">
+         </div>
+            
+      </div>
         
-  
-    
-  <div> 
-        <img src="/images/2.png">
-    </div>
+   </div>
+         
 </div>
 
 

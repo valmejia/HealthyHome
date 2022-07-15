@@ -1,0 +1,23 @@
+<div class="container mt-3">
+    <form action="/tasks/create" method="post">
+    <h1> Add Task</h1>
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="title" class="form-control" placeholder="task description" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" rows="3" cols="250" name="descrition"></textarea>
+        </div>
+
+         <label for="description" class="form-label">Room</label>
+        <select class="form-select" name="room_id" required>
+            {{#each rooms}}
+                <option value={{this._id}}>{{this.roomName}}</option>
+            {{/each}}
+        </select>
+
+        <button type="submit" class="buttonazul mt-4">Guardar</button>
+    </form>
+</div>
